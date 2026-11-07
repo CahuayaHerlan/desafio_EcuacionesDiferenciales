@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedVecinal | Centro de Operaciones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="particles" id="particles"></div>
+
+    <!-- BARRA SUPERIOR -->
+    <header class="topbar">
+        <div class="profile">
+            <div class="rank">RV<br><strong>100</strong></div>
+            <div>
+                <h3>REDVECINAL</h3>
+                <span>Centro de operaciones</span>
+                <div class="xp"><span></span></div>
+                <small>Red comunitaria de apoyo</small>
+            </div>
+        </div>
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+            SISTEMA ACTIVO
+        </div>
+
+        <div class="top-actions">
+            <div class="simulation-count">
+                ✦ <strong id="simulationCount">0</strong> SIMULACIONES
+            </div>
+            <button class="round-btn" id="themeBtn" title="Cambiar apariencia">☼</button>
+            <button class="round-btn" id="settingsBtn" title="Configuración">⚙</button>
+        </div>
+    </header>
+
+    <!-- MENÚ LATERAL -->
+    <aside class="sidebar">
+        <button class="nav-btn active" data-section="inicio" title="Inicio">⌂</button>
+        <button class="nav-btn" data-section="laboratorio" title="Laboratorio">⬡</button>
+        <button class="nav-btn" data-section="resultados" title="Resultados">▥</button>
+        <button class="nav-btn" data-section="historial" title="Historial">◷</button>
+        <button class="nav-btn" data-section="academia" title="Academia">ⓘ</button>
+    </aside>
+
+    <main class="main-container">
+
+        <!-- ===================================== -->
+        <!-- INICIO -->
+        <!-- ===================================== -->
+
+        <section class="page-section active" id="inicio">
+
+            <div class="home-background"></div>
+            <div class="home-overlay"></div>
+
+            <div class="home-content">
+
+                <span class="eyebrow">MENÚ PRINCIPAL</span>
+
+                <h1>Centro de operaciones</h1>
+
+                <p class="subtitle">
+                    Bienvenido a RedVecinal. Selecciona una actividad para continuar.
+                </p>
+
+                <div class="home-context">
+                    <span>RED COMUNITARIA</span>
+                    <p>
+                        Una plataforma orientada a conectar hogares participantes,
+                        facilitar la difusión de reportes de mascotas extraviadas
+                        y fortalecer la colaboración entre los miembros de una comunidad.
+                    </p>
+                </div>
+
+                <div class="home-grid">
+
+                    <button class="home-card card-wide purple" data-go="laboratorio">
+                        <span class="card-icon">⬡</span>
+                        <span class="card-text">
+                            <small>01 · SIMULACIÓN</small>
+                            <strong>Iniciar laboratorio</strong>
+                            <em>Experimenta con métodos numéricos.</em>
+                        </span>
+                        <span class="arrow">➜</span>
+                    </button>
+
+                    <button class="home-card pink" data-go="resultados">
+                        <span class="card-icon">▥</span>
+                        <span class="card-text">
+                            <small>02 · ANÁLISIS</small>
+                            <strong>Resultados</strong>
+                            <em>Gráficas y comparaciones.</em>
+                        </span>
+                    </button>
+
+                    <button class="home-card orange" data-go="historial">
+                        <span class="card-icon">◷</span>
+                        <span class="card-text">
+                            <small>03 · REGISTROS</small>
+                            <strong>Historial</strong>
+                            <em>Simulaciones guardadas.</em>
+                        </span>
+                    </button>
+
+                    <button class="home-card card-wide dark" data-go="academia">
+                        <span class="card-icon">✧</span>
+                        <span class="card-text">
+                            <small>04 · ACADEMIA</small>
+                            <strong>Acerca de RedVecinal</strong>
+                            <em>Problema, modelo matemático y métodos utilizados.</em>
+                        </span>
+                        <span class="arrow">➜</span>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================== -->
+        <!-- LABORATORIO -->
+        <!-- ===================================== -->
+
+        <section class="page-section panel-page" id="laboratorio">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">01 · SIMULACIÓN</span>
+                    <h1>Laboratorio numérico</h1>
+                    <p>
+                        Configura el crecimiento de hogares participantes y ejecuta los métodos.
+                    </p>
+                </div>
+
+                <div class="section-badge">● MOTOR ACTIVO</div>
+            </div>
+
+            <!-- PROBLEMA -->
+            <div class="glass-panel context-panel">
+
+                <span class="eyebrow">DESAFÍO INDIVIDUAL</span>
+
+                <h2>
+                    RedVecinal: modelación del crecimiento de una red comunitaria
+                </h2>
+
+                <p>
+                    RedVecinal representa una plataforma comunitaria que busca facilitar
+                    el reencuentro de mascotas extraviadas mediante la participación de
+                    hogares que colaboran difundiendo reportes, compartiendo información
+                    y comunicándose con otros miembros de la comunidad.
+                </p>
+
+                <p>
+                    A medida que la plataforma se conoce, se espera que más hogares
+                    se incorporen a la red. Sin embargo, el crecimiento no puede ser
+                    ilimitado: existe una cantidad máxima estimada de hogares que
+                    podrían participar dentro del área de cobertura considerada.
+                </p>
+
+                <p>
+                    Por ello, el crecimiento será inicialmente rápido y posteriormente
+                    tenderá a estabilizarse. El modelo permitirá estimar la evolución
+                    de los hogares participantes durante un intervalo de tiempo y
+                    comparar la solución analítica con los métodos de Heun y
+                    Runge-Kutta de cuarto orden.
+                </p>
+
+                <div class="problem-goal">
+                    <strong>Pregunta del desafío:</strong>
+                    ¿Cómo evolucionará la cantidad de hogares participantes durante
+                    el periodo estudiado y qué tan cerca estará de alcanzar la
+                    capacidad máxima estimada de la red?
+                </div>
+
+            </div>
+
+            <!-- PARÁMETROS -->
+            <div class="lab-layout">
+
+                <div class="glass-panel input-panel">
+
+                    <h2>⚙ Parámetros del modelo</h2>
+
+                    <p class="muted">
+                        Modelo logístico de crecimiento de hogares participantes.
+                    </p>
+
+                    <div class="equation-box">
+                        <span>Ecuación diferencial</span>
+                        <strong>dP/dt = rP(1 − P/K)</strong>
+                    </div>
+
+                    <div class="model-note">
+                        <strong>Condición inicial:</strong>
+                        P(0) = P₀
+                        <br>
+                        <strong>Variable independiente:</strong>
+                        tiempo t, medido en meses.
+                        <br>
+                        <strong>Variable dependiente:</strong>
+                        P(t), cantidad de hogares participantes.
+                    </div>
+
+                    <div class="field-grid">
+
+                        <label>
+                            Hogares iniciales (P₀)
+                            <input
+                                type="number"
+                                id="p0"
+                                value="20"
+                                min="0.001"
+                                step="any"
+                            >
+                            <small>Unidad: hogares</small>
+                        </label>
+
+                        <label>
+                            Tasa de crecimiento (r)
+                            <input
+                                type="number"
+                                id="r"
+                                value="0.25"
+                                min="0.001"
+                                step="any"
+                            >
+                            <small>Unidad: mes⁻¹</small>
+                        </label>
+
+                        <label>
+                            Capacidad máxima (K)
+                            <input
+                                type="number"
+                                id="capacity"
+                                value="200"
+                                min="0.001"
+                                step="any"
+                            >
+                            <small>Unidad: hogares</small>
+                        </label>
+
+                        <label>
+                            Tiempo final (T)
+                            <input
+                                type="number"
+                                id="tf"
+                                value="20"
+                                min="0.1"
+                                step="any"
+                            >
+                            <small>Unidad: meses</small>
+                        </label>
+
+                        <label>
+                            Paso de integración (h)
+                            <input
+                                type="number"
+                                id="h"
+                                value="1"
+                                min="0.001"
+                                step="any"
+                            >
+                            <small>Unidad: meses</small>
+                        </label>
+
+                    </div>
+
+                    <div class="field-note">
+                        <span>ⓘ</span>
+                        Los valores son hipotéticos y pueden modificarse para estudiar
+                        distintos escenarios. La tasa r se expresa por mes y los pasos
+                        de integración se expresan en meses.
+                    </div>
+
+                    <div class="button-group">
+                        <button class="primary-btn" id="calculateBtn">
+                            ▶ Ejecutar simulación
+                        </button>
+
+                        <button class="secondary-btn" id="resetBtn">
+                            ↻ Restablecer
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- ASISTENTE -->
+                <div class="glass-panel info-panel">
+
+                    <h2>🐾 Asistente RedVecinal</h2>
+
+                    <div class="assistant-face" id="assistantFace">🐶</div>
+
+                    <h3 id="assistantTitle">¡Preparado para ayudar!</h3>
+
+                    <p id="assistantText">
+                        Introduce los parámetros y ejecuta la simulación para
+                        estudiar el crecimiento de la red comunitaria.
+                    </p>
+
+                    <div class="assistant-status">
+                        <span></span> ASISTENTE DISPONIBLE
+                    </div>
+
+                    <div class="mini-equation">
+                        <span>Objetivo</span>
+                        <strong>
+                            Estimar el crecimiento hasta la capacidad máxima
+                        </strong>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- PROCEDIMIENTO -->
+            <div class="glass-panel procedure-panel">
+
+                <div class="panel-title-row">
+                    <h2>Procedimiento matemático</h2>
+
+                    <button
+                        class="secondary-btn small-btn"
+                        id="toggleProcedure"
+                    >
+                        Mostrar procedimiento ＋
+                    </button>
+                </div>
+
+                <div id="procedureContent" class="procedure-content hidden">
+
+                    <h3>1. Definición del modelo y sus variables</h3>
+
+                    <p>
+                        Se desea representar la cantidad de hogares que participan
+                        en RedVecinal a medida que transcurre el tiempo. Para ello,
+                        se utiliza un modelo logístico, en el cual el crecimiento
+                        depende de la cantidad actual de participantes y de la
+                        capacidad máxima estimada.
+                    </p>
+
+                    <div class="math-line">
+                        dP/dt = rP(1 − P/K)
+                    </div>
+
+                    <div class="table-container">
+                        <table class="definition-table">
+                            <thead>
+                                <tr>
+                                    <th>Símbolo</th>
+                                    <th>Descripción</th>
+                                    <th>Unidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>P(t)</td>
+                                    <td>Hogares participantes en el tiempo t</td>
+                                    <td>Hogares</td>
+                                </tr>
+                                <tr>
+                                    <td>t</td>
+                                    <td>Tiempo transcurrido</td>
+                                    <td>Meses</td>
+                                </tr>
+                                <tr>
+                                    <td>P₀</td>
+                                    <td>Cantidad inicial de hogares</td>
+                                    <td>Hogares</td>
+                                </tr>
+                                <tr>
+                                    <td>r</td>
+                                    <td>Tasa proporcional de crecimiento</td>
+                                    <td>Mes⁻¹</td>
+                                </tr>
+                                <tr>
+                                    <td>K</td>
+                                    <td>Capacidad máxima estimada</td>
+                                    <td>Hogares</td>
+                                </tr>
+                                <tr>
+                                    <td>T</td>
+                                    <td>Tiempo final de simulación</td>
+                                    <td>Meses</td>
+                                </tr>
+                                <tr>
+                                    <td>h</td>
+                                    <td>Paso de integración</td>
+                                    <td>Meses</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>2. Condición inicial</h3>
+
+                    <p>
+                        El problema se plantea como una ecuación diferencial con
+                        condición inicial. Esta condición establece que al comenzar
+                        la simulación, cuando t = 0, la cantidad de hogares
+                        participantes es igual al valor inicial P₀.
+                    </p>
+
+                    <div class="math-line">
+                        P(0) = P₀
+                    </div>
+
+                    <p>
+                        Por tanto, el problema de valor inicial queda definido
+                        mediante la ecuación diferencial logística y la condición
+                        P(0) = P₀, dentro del intervalo de tiempo 0 ≤ t ≤ T.
+                    </p>
+
+                    <h3>3. Solución analítica</h3>
+
+                    <p>
+                        La solución exacta del modelo se obtiene mediante la
+                        separación de variables e integración. Para los parámetros
+                        establecidos, se utiliza la siguiente expresión:
+                    </p>
+
+                    <div class="math-line">
+                        P(t) = K / [1 + ((K − P₀)/P₀)e<sup>−rt</sup>]
+                    </div>
+
+                    <h4 class="subprocedure-title">
+                        Verificación de la condición inicial
+                    </h4>
+
+                    <p>
+                        Sustituyendo t = 0 en la solución analítica:
+                    </p>
+
+                    <div class="math-line">
+                        P(0) = K / [1 + ((K − P₀)/P₀)e<sup>0</sup>]
+                    </div>
+
+                    <div class="math-line">
+                        P(0) = K / [1 + (K − P₀)/P₀] = P₀
+                    </div>
+
+                    <p>
+                        Se comprueba que la solución satisface la condición inicial
+                        establecida para el problema.
+                    </p>
+
+                    <h4 class="subprocedure-title">
+                        Verificación de la ecuación diferencial
+                    </h4>
+
+                    <p>
+                        Definiendo A = (K − P₀)/P₀, la solución puede expresarse
+                        como P(t) = K/(1 + Ae<sup>−rt</sup>). Al derivarla se obtiene:
+                    </p>
+
+                    <div class="math-line">
+                        P'(t) = rKAe<sup>−rt</sup> / (1 + Ae<sup>−rt</sup>)²
+                    </div>
+
+                    <p>
+                        Por otro lado, al sustituir la solución en el lado derecho
+                        de la ecuación diferencial:
+                    </p>
+
+                    <div class="math-line">
+                        rP(1 − P/K) =
+                        rKAe<sup>−rt</sup> / (1 + Ae<sup>−rt</sup>)²
+                    </div>
+
+                    <p>
+                        Ambas expresiones son iguales. Por consiguiente, la
+                        solución analítica también satisface la ecuación
+                        diferencial del modelo.
+                    </p>
+
+                    <h3>4. Método de Heun (Runge-Kutta de segundo orden)</h3>
+
+                    <p>
+                        El método de Heun utiliza una pendiente inicial y otra
+                        pendiente calculada mediante un valor predictor. Finalmente,
+                        promedia ambas pendientes para obtener el siguiente valor.
+                    </p>
+
+                    <div class="math-line">
+                        k₁ = f(tₙ, Pₙ)
+                    </div>
+
+                    <div class="math-line">
+                        k₂ = f(tₙ + h, Pₙ + hk₁)
+                    </div>
+
+                    <div class="math-line">
+                        Pₙ₊₁ = Pₙ + (h/2)(k₁ + k₂)
+                    </div>
+
+                    <h3>5. Método Runge-Kutta de cuarto orden (RK4)</h3>
+
+                    <p>
+                        RK4 utiliza cuatro pendientes ponderadas. Estas pendientes
+                        permiten considerar el comportamiento aproximado de la
+                        solución al inicio, en dos puntos intermedios y al final
+                        del intervalo.
+                    </p>
+
+                    <div class="math-line">
+                        k₁ = f(tₙ, Pₙ)
+                    </div>
+
+                    <div class="math-line">
+                        k₂ = f(tₙ + h/2, Pₙ + hk₁/2)
+                    </div>
+
+                    <div class="math-line">
+                        k₃ = f(tₙ + h/2, Pₙ + hk₂/2)
+                    </div>
+
+                    <div class="math-line">
+                        k₄ = f(tₙ + h, Pₙ + hk₃)
+                    </div>
+
+                    <div class="math-line">
+                        Pₙ₊₁ = Pₙ + (h/6)(k₁ + 2k₂ + 2k₃ + k₄)
+                    </div>
+
+                    <h3>6. Cálculo de errores</h3>
+
+                    <p>
+                        Para evaluar la precisión de los métodos numéricos,
+                        se comparan sus resultados con la solución analítica.
+                        Se utilizan el error absoluto y el error relativo porcentual.
+                    </p>
+
+                    <div class="math-line">
+                        Error absoluto = |P<sub>exacta</sub> − P<sub>aproximada</sub>|
+                    </div>
+
+                    <div class="math-line">
+                        Error relativo (%) =
+                        (Error absoluto / |P<sub>exacta</sub>|) × 100
+                    </div>
+
+                    <p>
+                        El error relativo se calcula cuando el valor exacto
+                        es diferente de cero.
+                    </p>
+
+                    <h3>7. Comparación de tamaños de paso</h3>
+
+                    <p>
+                        Los métodos se ejecutan inicialmente con el tamaño de
+                        paso h y posteriormente con h/2. La comparación de los
+                        errores permite observar cómo influye la reducción del
+                        intervalo en la precisión de cada aproximación.
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ===================================== -->
+        <!-- RESULTADOS -->
+        <!-- ===================================== -->
+
+        <section class="page-section panel-page" id="resultados">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">02 · ANÁLISIS</span>
+                    <h1>Resultados y gráficas</h1>
+                    <p>
+                        Evaluación del crecimiento mediante la solución analítica,
+                        Heun y RK4.
+                    </p>
+                </div>
+
+                <div class="section-badge" id="resultStatus">
+                    ESPERANDO SIMULACIÓN
+                </div>
+            </div>
+
+            <!-- MÉTRICAS -->
+            <div class="metrics-grid">
+
+                <div class="metric-card">
+                    <span>Solución analítica final</span>
+                    <strong id="metricExact">—</strong>
+                    <small>Hogares en T</small>
+                </div>
+
+                <div class="metric-card">
+                    <span>Error absoluto de Heun</span>
+                    <strong id="metricHeunAbs">—</strong>
+                    <small>Diferencia en hogares</small>
+                </div>
+
+                <div class="metric-card">
+                    <span>Error relativo de Heun</span>
+                    <strong id="metricHeunRel">—</strong>
+                    <small>Porcentaje (%)</small>
+                </div>
+
+                <div class="metric-card">
+                    <span>Error absoluto de RK4</span>
+                    <strong id="metricRK4Abs">—</strong>
+                    <small>Diferencia en hogares</small>
+                </div>
+
+                <div class="metric-card">
+                    <span>Error relativo de RK4</span>
+                    <strong id="metricRK4Rel">—</strong>
+                    <small>Porcentaje (%)</small>
+                </div>
+
+                <div class="metric-card">
+                    <span>Pasos comparados</span>
+                    <strong id="metricStep">—</strong>
+                    <small>h y h/2 en meses</small>
+                </div>
+
+            </div>
+
+            <!-- GRÁFICA -->
+            <div class="glass-panel chart-panel">
+
+                <div class="panel-title-row">
+                    <div>
+                        <h2>Evolución de hogares participantes</h2>
+                        <p class="muted">
+                            Comparación de las tres soluciones durante el intervalo estudiado.
+                        </p>
+                    </div>
+
+                    <div class="chart-controls">
+                        <button class="secondary-btn small-btn" id="playChartBtn">
+                            ▶ Reproducir
+                        </button>
+
+                        <button class="secondary-btn small-btn" id="restartChartBtn">
+                            ↻ Reiniciar
+                        </button>
+                    </div>
+                </div>
+
+                <canvas id="mainChart" height="300"></canvas>
+
+                <div class="chart-legend">
+                    <span><i class="legend-dot exact"></i> Analítica</span>
+                    <span><i class="legend-dot heun"></i> Heun</span>
+                    <span><i class="legend-dot rk4"></i> RK4</span>
+                    <span><i class="legend-dot capacity"></i> Capacidad K</span>
+                </div>
+
+                <p class="chart-progress" id="chartProgress">
+                    Ejecuta una simulación para generar la gráfica.
+                </p>
+
+            </div>
+
+            <!-- TABLAS -->
+            <div class="glass-panel table-panel">
+
+                <div class="panel-title-row">
+                    <div>
+                        <h2>Tablas comparativas por iteración</h2>
+                        <p class="muted">
+                            Se presentan los resultados para h y h/2, incluyendo
+                            errores absolutos y relativos porcentuales.
+                        </p>
+                    </div>
+
+                    <button class="secondary-btn small-btn" id="showTableBtn">
+                        Ocultar tablas
+                    </button>
+                </div>
+
+                <div id="tableContainer" class="table-container">
+
+                    <p class="muted">
+                        Los datos aparecerán después de ejecutar una simulación.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- RESULTADOS INDIVIDUALES -->
+            <div class="glass-panel result-detail-panel">
+
+                <h2>Resultados individuales y conclusiones</h2>
+
+                <p class="muted">
+                    Cada método presenta su resultado numérico y una conclusión
+                    dividida en dos partes: interpretación del problema y aplicación
+                    a Ingeniería de Sistemas.
+                </p>
+
+                <!-- ANALÍTICA -->
+                <div class="method-result">
+
+                    <div class="method-heading">
+                        <span class="method-number">01</span>
+
+                        <div>
+                            <h3>Solución analítica</h3>
+                            <span>Resultado exacto del modelo</span>
+                        </div>
+                    </div>
+
+                    <div class="method-value" id="exactValue">—</div>
+
+                    <div class="conclusion-part">
+                        <h4>Parte 1 · Interpretación del problema</h4>
+                        <p id="exactReal">
+                            La interpretación aparecerá después de la simulación.
+                        </p>
+                    </div>
+
+                    <div class="conclusion-part systems">
+                        <h4>Parte 2 · Aplicación a Ingeniería de Sistemas</h4>
+                        <p id="exactSystems">
+                            La aplicación aparecerá después de la simulación.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- HEUN -->
+                <div class="method-result">
+
+                    <div class="method-heading">
+                        <span class="method-number">02</span>
+
+                        <div>
+                            <h3>Método de Heun</h3>
+                            <span>Aproximación numérica de segundo orden</span>
+                        </div>
+                    </div>
+
+                    <div class="method-value" id="heunValue">—</div>
+
+                    <div class="result-error" id="heunError">
+                        Error absoluto: — · Error relativo: —
+                    </div>
+
+                    <div class="conclusion-part">
+                        <h4>Parte 1 · Interpretación del problema</h4>
+                        <p id="heunReal">
+                            La interpretación aparecerá después de la simulación.
+                        </p>
+                    </div>
+
+                    <div class="conclusion-part systems">
+                        <h4>Parte 2 · Aplicación a Ingeniería de Sistemas</h4>
+                        <p id="heunSystems">
+                            La aplicación aparecerá después de la simulación.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- RK4 -->
+                <div class="method-result">
+
+                    <div class="method-heading">
+                        <span class="method-number">03</span>
+
+                        <div>
+                            <h3>Runge-Kutta de cuarto orden (RK4)</h3>
+                            <span>Aproximación numérica de cuarto orden</span>
+                        </div>
+                    </div>
+
+                    <div class="method-value" id="rk4Value">—</div>
+
+                    <div class="result-error" id="rk4Error">
+                        Error absoluto: — · Error relativo: —
+                    </div>
+
+                    <div class="conclusion-part">
+                        <h4>Parte 1 · Interpretación del problema</h4>
+                        <p id="rk4Real">
+                            La interpretación aparecerá después de la simulación.
+                        </p>
+                    </div>
+
+                    <div class="conclusion-part systems">
+                        <h4>Parte 2 · Aplicación a Ingeniería de Sistemas</h4>
+                        <p id="rk4Systems">
+                            La aplicación aparecerá después de la simulación.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- COMPARACIÓN DE PASOS -->
+            <div class="glass-panel comparison-panel">
+
+                <h2>Comparación entre h y h/2</h2>
+
+                <p class="muted">
+                    Se analiza la variación de los resultados y de los errores
+                    cuando se reduce el tamaño del paso de integración.
+                </p>
+
+                <div id="stepComparison" class="comparison-content">
+                    <p>Ejecuta una simulación para visualizar la comparación.</p>
+                </div>
+
+                <div class="conclusion-part">
+                    <h4>Conclusión de la comparación</h4>
+                    <p id="comparisonConclusion">
+                        La conclusión aparecerá después de la simulación.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- CONCLUSIÓN GENERAL -->
+            <div class="glass-panel conclusion-panel">
+
+                <h2>Conclusión general del problema</h2>
+
+                <div class="conclusion-part">
+                    <h4>Parte 1 · Interpretación del problema real</h4>
+                    <p id="generalReal">
+                        La interpretación general aparecerá después de la simulación.
+                    </p>
+                </div>
+
+                <div class="conclusion-part systems">
+                    <h4>Parte 2 · Aplicación a Ingeniería de Sistemas</h4>
+                    <p id="generalSystems">
+                        La aplicación aparecerá después de la simulación.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================================== -->
+        <!-- HISTORIAL -->
+        <!-- ===================================== -->
+
+        <section class="page-section panel-page" id="historial">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">03 · REGISTROS</span>
+                    <h1>Historial de simulaciones</h1>
+                    <p>
+                        Consulta los experimentos realizados durante la sesión.
+                    </p>
+                </div>
+
+                <button class="secondary-btn" id="clearHistoryBtn">
+                    Eliminar historial
+                </button>
+            </div>
+
+            <div class="glass-panel history-panel">
+
+                <div id="historyList">
+
+                    <div class="empty-state">
+                        <span>◷</span>
+                        <h2>Sin registros todavía</h2>
+                        <p>Las simulaciones realizadas aparecerán aquí.</p>
+
+                        <button class="primary-btn" data-go="laboratorio">
+                            Ir al laboratorio
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================================== -->
+        <!-- ACADEMIA -->
+        <!-- ===================================== -->
+
+        <section class="page-section panel-page" id="academia">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">04 · ACADEMIA</span>
+                    <h1>Acerca de RedVecinal</h1>
+                    <p>
+                        Contexto, modelo matemático y fundamentos de los métodos numéricos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="glass-panel context-panel">
+
+                <span class="eyebrow">DESAFÍO INDIVIDUAL</span>
+
+                <h2>
+                    RedVecinal: modelación del crecimiento de una red comunitaria
+                </h2>
+
+                <p>
+                    RedVecinal se plantea como una plataforma comunitaria destinada
+                    a facilitar el reencuentro de mascotas extraviadas. Para cumplir
+                    este objetivo, busca incorporar hogares que puedan colaborar
+                    con la difusión de reportes, la comunicación entre vecinos y
+                    el intercambio de información sobre animales desaparecidos.
+                </p>
+
+                <p>
+                    La incorporación de participantes puede crecer con el tiempo,
+                    especialmente cuando la plataforma empieza a ser conocida y
+                    recomendada por los primeros miembros. No obstante, este
+                    crecimiento está limitado por la cantidad de hogares que
+                    podrían integrarse dentro de una determinada zona o comunidad.
+                </p>
+
+                <p>
+                    Por esta razón se utiliza un modelo logístico. Este modelo
+                    permite representar un crecimiento que inicialmente puede
+                    ser acelerado, pero que disminuye progresivamente cuando la
+                    cantidad de participantes se aproxima a la capacidad máxima
+                    estimada.
+                </p>
+
+                <div class="problem-goal">
+                    <strong>Objetivo:</strong>
+                    estudiar la evolución de la participación comunitaria,
+                    estimar su estabilización y comparar diferentes métodos
+                    para resolver la ecuación diferencial.
+                </div>
+
+            </div>
+
+            <!-- INFORMACIÓN DEL MODELO -->
+            <div class="academy-grid">
+
+                <article class="glass-panel academy-card">
+                    <span class="academy-icon">P(t)</span>
+                    <h2>Variable dependiente</h2>
+                    <p>
+                        P(t) representa la cantidad de hogares participantes
+                        en la plataforma en un instante determinado. Su unidad
+                        de medida es el número de hogares.
+                    </p>
+                </article>
+
+                <article class="glass-panel academy-card">
+                    <span class="academy-icon">t</span>
+                    <h2>Variable independiente</h2>
+                    <p>
+                        t representa el tiempo transcurrido desde el inicio
+                        de la simulación. Para este modelo se utiliza el mes
+                        como unidad de tiempo.
+                    </p>
+                </article>
+
+                <article class="glass-panel academy-card">
+                    <span class="academy-icon">r</span>
+                    <h2>Tasa de crecimiento</h2>
+                    <p>
+                        r representa la tasa proporcional de crecimiento
+                        de los participantes. Determina qué tan rápido aumenta
+                        la red en relación con la cantidad existente. Su unidad
+                        es el inverso de meses.
+                    </p>
+                </article>
+
+                <article class="glass-panel academy-card">
+                    <span class="academy-icon">K</span>
+                    <h2>Capacidad máxima</h2>
+                    <p>
+                        K representa la cantidad máxima estimada de hogares
+                        que podrían participar dentro del área considerada.
+                        Es un límite teórico del modelo y se expresa en hogares.
+                    </p>
+                </article>
+
+                <article class="glass-panel academy-card">
+                    <span class="academy-icon">∫</span>
+                    <h2>Modelo logístico</h2>
+                    <div class="math-line">P' = rP(1 − P/K)</div>
+                    <p>
+                        Describe el crecimiento de una población limitada
+                        por una capacidad máxima. La tasa de crecimiento
+                        disminuye conforme P(t) se aproxima a K.
+                    </p>
+                </article>
+
+                <article class="glass-panel academy-card">
+                    <span class="academy-icon">∑</span>
+                    <h2>Condición inicial</h2>
+                    <div class="math-line">P(0) = P₀</div>
+                    <p>
+                        Define la cantidad de hogares participantes al comienzo
+                        del estudio. Este valor permite establecer el problema
+                        de valor inicial que resolverán los métodos.
+                    </p>
+                </article>
+
+                <article class="glass-panel academy-card">
+                    <span class="academy-icon">≡</span>
+                    <h2>Solución analítica</h2>
+                    <div class="math-line">
+                        P(t) = K / [1 + ((K − P₀)/P₀)e<sup>−rt</sup>]
+                    </div>
+                    <p>
+                        Proporciona la solución exacta del modelo para los
+                        parámetros establecidos y permite verificar las
+                        aproximaciones numéricas.
+                    </p>
+                </article>
+
+                <article class="glass-panel academy-card">
+                    <span class="academy-icon">⚙</span>
+                    <h2>Método de Heun</h2>
+                    <p>
+                        Es un método numérico de segundo orden que utiliza
+                        una predicción y una corrección mediante el promedio
+                        de dos pendientes consecutivas.
+                    </p>
+                </article>
+
+                <article class="glass-panel academy-card">
+                    <span class="academy-icon">✦</span>
+                    <h2>Runge-Kutta RK4</h2>
+                    <p>
+                        Es un método de cuarto orden que utiliza cuatro
+                        pendientes ponderadas para calcular cada nuevo
+                        valor aproximado de la solución.
+                    </p>
+                </article>
+
+                <article class="glass-panel academy-card">
+                    <span class="academy-icon">%</span>
+                    <h2>Errores numéricos</h2>
+                    <p>
+                        El error absoluto mide la diferencia entre el valor
+                        exacto y el aproximado. El error relativo porcentual
+                        expresa esa diferencia en relación con el valor exacto.
+                    </p>
+                </article>
+
+                <article class="glass-panel academy-card">
+                    <span class="academy-icon">h</span>
+                    <h2>Tamaño de paso</h2>
+                    <p>
+                        h representa el intervalo utilizado en cada iteración.
+                        También se evalúa h/2 para analizar cómo influye la
+                        reducción del paso en la precisión de los resultados.
+                    </p>
+                </article>
+
+                <article class="glass-panel academy-card">
+                    <span class="academy-icon">▥</span>
+                    <h2>Aplicación a Ingeniería de Sistemas</h2>
+                    <p>
+                        El modelo permite analizar escenarios de crecimiento
+                        de usuarios, capacidad de una plataforma, planificación
+                        de infraestructura y asignación de recursos tecnológicos.
+                    </p>
+                </article>
+
+            </div>
+
+            <!-- SUPUESTOS -->
+            <div class="glass-panel context-panel">
+
+                <h2>Supuestos y limitaciones</h2>
+
+                <p>
+                    Se supone que la tasa de crecimiento permanece constante
+                    durante el intervalo estudiado y que existe una capacidad
+                    máxima de participación previamente estimada. También se
+                    considera que todos los hogares se contabilizan de la misma
+                    manera, sin diferenciar su nivel de actividad o frecuencia
+                    de colaboración.
+                </p>
+
+                <p>
+                    Los parámetros utilizados son hipotéticos y se expresan
+                    con las unidades indicadas. En una situación real, la
+                    participación dependería de factores adicionales, como
+                    la difusión de la plataforma, la confianza de los usuarios,
+                    la disponibilidad de dispositivos y la conectividad.
+                </p>
+
+                <p>
+                    Por tanto, los resultados deben interpretarse como escenarios
+                    matemáticos hipotéticos y no como predicciones reales de
+                    adopción. El modelo estudia el crecimiento de hogares
+                    participantes, pero no determina directamente cuántas
+                    mascotas serán recuperadas.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- NAVEGACIÓN INFERIOR -->
+    <nav class="bottom-nav">
+        <button class="bottom-btn active" data-section="inicio">
+            <span>⌂</span>Inicio
+        </button>
+
+        <button class="bottom-btn" data-section="laboratorio">
+            <span>⬡</span>Laboratorio
+        </button>
+
+        <button class="bottom-btn" data-section="resultados">
+            <span>▥</span>Resultados
+        </button>
+
+        <button class="bottom-btn" data-section="historial">
+            <span>◷</span>Historial
+        </button>
+
+        <button class="bottom-btn" data-section="academia">
+            <span>ⓘ</span>Academia
+        </button>
+    </nav>
+
+    <!-- ASISTENTE FLOTANTE -->
+    <button
+        class="floating-assistant"
+        id="floatingAssistant"
+        title="Asistente"
+    >
+        ✦
+    </button>
+
+    <!-- MENSAJES -->
+    <div class="toast" id="toast"></div>
+
+    <!-- CONFIGURACIÓN -->
+    <div class="modal hidden" id="settingsModal">
+
+        <div class="modal-content glass-panel">
+
+            <button class="modal-close" id="closeSettings">×</button>
+
+            <span class="eyebrow">CONFIGURACIÓN</span>
+
+            <h2>Centro de preferencias</h2>
+
+            <p>
+                RedVecinal · Simulador de crecimiento logístico.
+            </p>
+
+            <button class="secondary-btn" id="printBtn">
+                Imprimir / Guardar PDF
+            </button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
